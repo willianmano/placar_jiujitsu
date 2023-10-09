@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br" >
+
+<head>
+  <meta name="description" content="Connyou - Sistemas de Relacionamento e Tecnologia." />
+  <meta name="generator" content="Connyou by Delphi 3.0 and PHP 5.5 in joomla!" />
+	<title>Placar Digital GUIGO JIU-JITSU</title>
+	<!-- Licença autorizada para Confederação Brasileira de Lutas Profissionais -->
+	<link rel="stylesheet" href="default.css" type="text/css" />
+
+
+	<script src="jquery.min.js" type="text/javascript"></script>
+	<script src="jquery-1.6.1.js" type="text/javascript"></script>
+	<script src="contador.js" type="text/javascript"></script>
+	
+</head>
+
+<body>
+<!--content wrapper-->
+<div id="contentWrapper">
+
+<!-- CRONO -->
+<div id="id_crono" class="brdbox">
+	<div id="id_crono_lf"><div id="id_lf_transp"></div></div>
+	
+	<div id="id_crono_ct" class="brdbox">
+		<div id="id_ct_transp" ></div>
+		<div style="margin-top: -25px;"><span id="minutos" value="5">5</span>:<span id="segundos">00</span></div>
+	</div>
+	
+	<div id="id_crono_rh"><div id="id_rh_transp" onclick="a.iniciar();return false;"></div></div>
+	<div id="id_txt_company"></div>
+</div>
+
+<!-- Pontuação -->
+<div id="id_ponto">
+  <div id="id_ponto_lf" class="brdbox">
+		<div class="time_na">
+			<div><img width="25" height="25" src="parafuso.png" style="float: left"></div>
+			<div style="float: left; width: 85%;">PONTUAÇÃO</div>
+			<div><img width="25" height="25" src="parafuso.png" style="float: right;"></div>
+		</div>
+		
+		<div >
+			<div id="id_uplf_hover"><div id="id_uplf_zerapt"></div></div>
+			<div id="time_a" class="time_pa"><span>0</span></div>
+			<div id="id_dwlf_hover"><div id="id_dwlf_retrpt"></div></div>
+		</div>
+	</div>
+
+  <div id="id_ponto_rh" class="brdbox">
+		<div class="time_nb">
+			<div><img width="25" height="25" src="parafuso.png" style="float: left"></div>
+			<div style="float: left; width: 85%;">PONTUAÇÃO</div>
+			<div><img width="25" height="25" src="parafuso.png" style="float: right;"></div>
+		</div>
+
+		<div >
+			<div id="id_uprh_hover"><div id="id_uprh_zerapt" style="background-color: blue;"></div></div>
+			<div id="time_b" class="time_pb"><span>0</span></div>
+			<div id="id_dwrh_hover"><div id="id_dwrh_retrpt"></div></div>
+		</div>		
+	</div>
+</div>
+
+<!-- Vantag e Punições - Title -->
+<div id="id_vantagens" style="background-image: url('line.jpg'); background-position-y: 2px; background-repeat: repeat-x; line-height: 25px;">
+	<div id="id_vanta_titl">
+		<div style="float: left; width: 50%;">
+			<div id="id_vtg_lftv">
+				<div style="float: left;"><img id="gbi4i" width="15" height="15" src="parafuso.png" style="float: left; margin-top: 3px;"></div>
+				<div style="float: left; width: 80%; position: relative;"><span>Vantagens</span></div>
+				<div style="float: right;"><img id="gbi4i" width="15" height="15" src="parafuso.png" style="float: right; margin-top: 3px;"></div>
+			</div>
+		</div>
+		<div style="float: left; width: 50%;">
+			<div id="id_vtg_lftp">
+				<div style="float: left;"><img id="gbi4i" width="15" height="15" src="parafuso.png" style="float: left; margin-top: 3px;"></div>
+				<div style="float: left; width: 80%; position: relative;"><span>Punições</span></div>
+				<div style="float: right;"><img id="gbi4i" width="15" height="15" src="parafuso.png" style="float: right; margin-top: 3px;"></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="id_vanta_titr">
+		<div style="float: left; width: 50%;">
+			<div id="id_vtg_rhtv">
+				<div style="float: left;"><img id="gbi4i" width="15" height="15" src="parafuso.png" style="float: left; margin-top: 3px;"></div>
+				<div style="float: left; width: 80%; position: relative;"><span>Vantagens</span></div>
+				<div style="float: right;"><img id="gbi4i" width="15" height="15" src="parafuso.png" style="float: left; margin-top: 3px;"></div>
+			</div>
+		</div>
+		<div style="float: left; width: 50%;">
+			<div id="id_vtg_rhtp">
+				<div style="float: left;"><img id="gbi4i" width="15" height="15" src="parafuso.png" style="float: left; margin-top: 3px;"></div>
+				<div style="float: left; width: 80%; position: relative;"><span>Punições</span></div>
+				<div style="float: right;"><img id="gbi4i" width="15" height="15" src="parafuso.png" style="float: left; margin-top: 3px;"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Vantag e Punições - Values -->
+<div id="id_vantagens">
+	<div id="id_vanta_vall">
+		<div style="float: left; width: 50%;">
+			<div >
+				<div id="id_uplf_vtg_hover"><div id="id_uplf_vtg_zerapt"></div></div>
+				<div id="id_vtg_lfvv" class="brdbox" name="VANTAGEM LF"><span>0</span></div>
+				<div id="id_dwlf_vtg_hover"><div id="id_dwlf_vtg_retrpt"></div></div>
+			</div>
+		</div>
+		<div style="float: left; width: 50%;">
+			<div id="id_uplf_pun_hover"><div id="id_uplf_pun_zerapt"></div></div>
+			<div id="id_vtg_lfvp" class="brdbox" name="PUNIÇÃO LF"><span>0</span></div>
+			<div id="id_dwlf_pun_hover"><div id="id_dwlf_pun_retrpt"></div></div>
+		</div>
+	</div>
+	<div id="id_vanta_valr">
+		<div style="float: left; width: 50%;">
+			<div id="id_uprh_vtg_hover"><div id="id_uprh_vtg_zerapt"></div></div>
+			<div id="id_vtg_rhvv" class="brdbox" name="VANTAGEM RH"><span>0</span></div>
+			<div id="id_dwrh_vtg_hover"><div id="id_dwrh_vtg_retrpt"></div></div>
+		</div>
+		<div style="float: left; width: 50%;">
+			<div id="id_uprh_pun_hover"><div id="id_uprh_pun_zerapt"></div></div>
+			<div id="id_vtg_rhvp" class="brdbox" name="PUNIÇÃO RH"><span>0</span></div>
+			<div id="id_dwrh_pun_hover"><div id="id_dwrh_pun_retrpt"></div></div>
+		</div>
+	</div>
+</div>
+
+<div style="margin-top: 10px; width: 100%; display: inline-block;">
+	<div id="id_buttons">
+		<label id="1">1 min.</label>|
+		<label id="2">2 min.</label>|
+		<label id="3">3 min.</label>|
+		<label id="4">4 min.</label>|
+		<label id="5">5 min.</label>|
+		<label id="6">6 min.</label>|
+		<label id="7">7 min.</label>|
+		<label id="8">8 min.</label>|
+		<label id="9">9 min.</label>|
+		<label id="10">10 min.</label>
+	</div>
+	<div id="id_buttons_f" style="width: 200px;">
+		<label id="f5">F 5 - Reiniciar</label>|
+		<label id="f11">F 11 - Tela Cheia</label>
+	</div>
+	<div id="id_companyft" style="display: none"></div>
+</div>
+
+</div>
+<!--/content wrapper-->
+
+<script type="text/javascript">
+var id_tme = 1;
+
+
+</script>
+
+</body>
+</html>

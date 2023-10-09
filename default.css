@@ -1,0 +1,198 @@
+body {
+font-family: Arial, Verdana, Lucida Console, Times New Roman; 
+text-align: center; font-weight: bold; 
+border: 1px solid #ddd;
+padding: 5px;
+border-radius: 5px;
+}
+
+/* CRONOMETRO */
+/*247, 255, 203*/
+.brdbox {border: ridge rgb(238, 238, 238) 8px; border-radius: 12px; }
+#id_crono {width: 99.0%; height: 240px;}
+#id_crono_lf, #id_crono_rh {width: 25%; float: left; max-height: 240px; margin-top: 3px;
+min-height: 200px; background: url('logo.jpeg') center no-repeat; background-size: 315px 200px; }
+#id_crono_rh {float: right;}
+
+#id_lf_transp, #id_rh_transp, #id_ct_transp {
+background-color: rgb(20, 255, 0);
+margin-top: 15px;
+height: 170px;
+color: white;
+font-weight: bold;
+font-size: 20px;
+opacity: 0.07;
+display: none;
+position: absolute;
+width: inherit;
+max-width: 46%;
+cursor: pointer;
+}
+
+#id_crono_ct {
+width: 48%; float: left; margin-bottom: 30px; max-height: 190px;
+font-size: 200px;
+color: red;
+}
+
+#id_txt_company {
+font-size: 12px;
+color: cadetblue;
+display: inline-block;
+margin-top: -25px;
+width: 100%;
+}
+
+
+/* PONTUAÇÃO */
+#id_ponto {width: 100%; display: inline-block;}
+#id_ponto_lf, #id_ponto_rh {float: left; width: 48%;}
+#id_ponto_rh {float: right; background-image: url("stripe_50b7d.png");}
+
+#id_uplf_hover, #id_dwlf_hover, #id_uprh_hover, #id_dwrh_hover {
+width: 100%;
+height: 120px;
+line-height: 100px;
+cursor: pointer;
+position: relative;
+margin-top: 10px;
+}
+
+#id_dwlf_hover, #id_dwrh_hover {
+margin-top: -120px;
+}
+
+#id_uplf_vtg_hover, #id_dwlf_vtg_hover, #id_uplf_pun_hover, #id_dwlf_pun_hover,
+#id_uprh_vtg_hover, #id_dwrh_vtg_hover, #id_uprh_pun_hover, #id_dwrh_pun_hover {
+position: absolute;
+width: 24%;
+height: 50px;
+cursor: pointer;
+margin-top: 10px;
+}
+
+#id_dwlf_vtg_hover, #id_dwlf_pun_hover,
+#id_dwrh_vtg_hover, #id_dwrh_pun_hover {
+margin-top: 75px;
+}
+
+#id_uplf_zerapt, #id_dwlf_retrpt, 
+#id_uprh_zerapt, #id_dwrh_retrpt, 
+#id_uplf_vtg_zerapt, #id_dwlf_vtg_retrpt, #id_uprh_vtg_zerapt, #id_dwrh_vtg_retrpt,
+#id_uplf_pun_zerapt, #id_dwlf_pun_retrpt, #id_uprh_pun_zerapt, #id_dwrh_pun_retrpt {
+background-color: rgb(20, 255, 0);
+width: 95%;
+padding: 15px;
+height: 100px;
+line-height: 100px;
+text-align: left;
+color: white;
+font-weight: bold;
+font-size: 20px;
+opacity: 0.07;
+cursor: pointer;
+display: none;
+}
+
+#id_dwlf_retrpt, #id_dwrh_retrpt, #id_dwlf_pun_retrpt, #id_dwrh_pun_retrpt {
+background-color: blue;
+}
+
+#id_uplf_vtg_zerapt, #id_dwlf_vtg_retrpt, #id_uplf_pun_zerapt, #id_dwlf_pun_retrpt,
+#id_uprh_vtg_zerapt, #id_dwrh_vtg_retrpt, #id_uprh_pun_zerapt, #id_dwrh_pun_retrpt {
+height: 50px;
+text-shadow: none;
+width: 95%;
+margin-left: 8px;
+line-height: 20px;
+padding: 0;
+}
+
+#id_dwlf_vtg_retrpt, #id_dwlf_pun_retrpt, #id_dwrh_vtg_retrpt, #id_dwrh_pun_retrpt {
+line-height: 80px;
+}
+
+.time_na, .time_nb {
+font-size: 22px; 
+color: white;
+text-shadow: -2px 0 black, 0 2px black, 1px 0 black, 0 -1px black; 
+background-color: rgb(219, 219, 219); 
+border: thick groove rgb(240, 240, 240); 
+border-radius: 25px;
+width: 30%;
+margin-left: 128px;
+position: absolute;
+margin-top: -24px;
+cursor: pointer;
+}
+.time_nb {color: white; background-color: rgb(219, 219, 219)}
+.img_paraf_lf, .img_paraf_rh {}
+
+.time_pa, .time_pb {font-family: my_font; font-size: 350px; font-weight: normal; background-color: white; line-height: 270px; margin-top: -130px;}
+.time_pb {background: transparent; }
+
+/* VANTAGENS */
+#id_vantagens {display: inline-block; width: 100%; border-radius: 5px; margin-top: 2px; font-size: 20px; line-height: 120px;}
+#id_vanta_titl, #id_vanta_titr, #id_vanta_vall, #id_vanta_valr {width: 50%; float: left;}
+
+#id_vtg_lftv, #id_vtg_lftp, #id_vtg_rhtv, #id_vtg_rhtp, 
+#id_vtg_lfvv, #id_vtg_lfvp, #id_vtg_rhvv, #id_vtg_rhvp {
+margin-left: 25%; float: left; width: 50%; border: 1px solid black; border-radius: 5px; background-color: rgb(179, 179, 179);}
+
+#id_vtg_lftv, #id_vtg_rhtv {color: yellow; text-shadow: black 0.1em 0.1em 0.2em; cursor: pointer;}
+#id_vtg_lftp, #id_vtg_rhtp {color: red; text-shadow: white 0.1em 0.1em 0.2em; cursor: pointer;}
+
+#id_vtg_lftp, #id_vtg_rhtv, #id_vtg_lfvp, #id_vtg_rhvv {width: 49%;}
+
+#id_vanta_vall, #id_vanta_valr {
+font-size: 150px; font-family: my_font; font-weight: normal;
+/*text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;*/
+}
+
+#id_vtg_lfvv, #id_vtg_rhvv {
+background: -webkit-gradient(linear, left top, left bottom, from(white), to(yellow));
+border: ridge rgb(238, 238, 238) 8px;
+width: 94%; margin-left: 0;
+border-radius: 12px;
+}
+
+#id_vtg_lfvp, #id_vtg_rhvp {
+background: -webkit-gradient(linear, left top, left bottom, from(white), to(red));
+border: ridge rgb(238, 238, 238) 8px;
+width: 94%; margin-left: 0;
+border-radius: 12px;
+}
+
+#id_companyft, #id_buttons, #id_buttons_f {
+line-height: 10px;
+font-size: 10px;
+text-shadow: 0.01em 0.01em white, 0.03em 0.02em #333;
+color: #757575;
+background-color: #eee;
+width: auto;
+float: right;
+padding: 2px;
+}
+
+#id_vtg_lfzv, #id_vtg_lfzp, #id_vtg_rhzv, #id_vtg_rhzp
+{
+height: 20px;
+width: 100%;
+float: left;
+margin-top: -25px;
+}
+
+#id_buttons, #id_buttons_f {
+float: left;
+width: 500px;
+border: 1px solid gray;
+}
+
+#minutos {
+margin-top: -20px;
+}
+
+@font-face {
+	font-family: my_font;
+	src: url("Franklin Gothic Heavy.ttf");
+}
